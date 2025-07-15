@@ -269,3 +269,42 @@ Organize all analyses in executable notebook with:
 - Interactive visualizations
 
 ---
+
+## Implementation
+
+### Project Structure
+
+This project uses a hybrid approach combining modular packages for reusable components and Jupyter notebooks for interactive analysis and visualization.
+
+```
+GraphConnectomicsPOC/
+├── src/                         # Core analysis modules
+│   ├── preprocessing/           # Data validation & preprocessing
+│   ├── local_structure/         # Motifs, clustering, local metrics
+│   ├── mesoscale/               # Community detection, modules
+│   ├── spectral/                # Eigenanalysis, decompositions
+│   ├── dynamics/                # Linear/nonlinear predictions
+│   ├── control/                 # Controllability analysis
+│   └── visualization/           # Plotting utilities
+├── notebooks/                   # Analysis workflows
+│   ├── 01_preprocessing.ipynb   # Data validation and basic stats
+│   ├── 02_local_structure.ipynb # Motifs and local connectivity
+│   ├── 03_mesoscale.ipynb       # Community detection
+│   ├── 04_spectral.ipynb        # Eigenspectrum analysis
+│   ├── 05_dynamics.ipynb        # Dynamical predictions
+│   └── 06_control.ipynb         # Control-theoretic analysis
+├── data/                        # Raw and processed connectome data
+├── results/                     # Output figures, tables, reports
+└── tests/                       # Unit tests for analysis functions
+```
+
+#### Design Philosophy
+
+- **Modules** provide reusable, testable functions for complex computations (eigendecomposition, community detection, control theory)
+- **Notebooks** enable interactive exploration, visualization, and narrative documentation of results
+- **Separation of concerns** allows others to use analysis methods independently of full workflows
+
+### Data
+
+Project data is based on the raw connectivity matrix representing the number of synapses between nodes in `data/l4dense_connectome.csv`
+

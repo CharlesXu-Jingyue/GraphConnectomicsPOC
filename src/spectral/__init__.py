@@ -1,0 +1,1 @@
+"""Spectral analysis and eigendecomposition methods."""
