@@ -191,7 +191,7 @@ By Charles Xu @ Caltech, 20250714
 - **Minimum driver nodes**: Maximum matching in bipartite representation
 - **Control matrix**: $\mathbf{B} \in \mathbb{R}^{n \times m}$ where $m$ is number of drivers
 - **Controllability Gramian**:
-  $$\mathbf{W}_c = \int_0^T e^{\mathbf{W}t}\mathbf{B}\mathbf{B}^T e^{\mathbf{W}^T t} dt$$ for different input configurations
+  $\mathbf{W}_c = \int_0^T e^{\mathbf{W}t}\mathbf{B}\mathbf{B}^T e^{\mathbf{W}^T t} dt$ for different input configurations
 - **Control energy**: For state transfer $\mathbf{x}_0 \to \mathbf{x}_f$:
   $$E = \min_{\mathbf{u}(t)} \int_0^T \|\mathbf{u}(t)\|^2 dt = (\mathbf{x}_f - e^{\mathbf{W}T}\mathbf{x}_0)^T \mathbf{W}_c^{-1} (\mathbf{x}_f - e^{\mathbf{W}T}\mathbf{x}_0)$$
 
