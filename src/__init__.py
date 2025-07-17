@@ -10,4 +10,4 @@ A comprehensive toolkit for analyzing neural connectome data including:
 """
 
 __version__ = "0.1.0"
-__author__ = "Charles Xu @ Caltech"
+__author__ = "Charles Xu"

@@ -306,5 +306,16 @@ GraphConnectomicsPOC/
 
 ### Data
 
-Project data is based on the raw connectivity matrix representing the number of synapses between nodes in `data/l4dense_connectome.csv`
+**Updated 20250716**
 
+Project data is based on the FlyWire *Drosophila* central brain connectome. The analysis focuses on a subset of 475 neurons from 18 cell types of interest (AOTU046, Delta7, EL, ER2, ER3a, ER3d, ER3m, ER3p, ER3w, ER4d, ER4m, EPG, TuBu01-03, TuBu07-09), generating a 475×475 connectivity matrix with weighted synaptic connections.
+
+### Analysis Approach
+
+This project employs an **unsupervised discovery paradigm**:
+
+1. **Blind Analysis**: Perform all connectivity analyses (clustering, motifs, spectral analysis, etc.) without using known cell type labels
+2. **Post-hoc Validation**: Compare discovered patterns with ground truth cell type classifications to validate biological relevance
+3. **Novel Discovery**: Identify connectivity patterns that may reveal previously unknown functional relationships
+
+The shuffled neuron ordering ensures unbiased analysis, preventing visual clustering artifacts based on cell type labels.
